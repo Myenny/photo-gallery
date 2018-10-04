@@ -31,7 +31,6 @@
   }
 }
 div .column {
-  border: 1px solid grey;
   margin: 10px;
   display: block;
   flex-basis: 0;
@@ -43,6 +42,8 @@ div .column {
 div .card-content {
   display: flex;
   flex-direction: column;
+  border: 1px solid grey;
+  padding: 2rem;
 }
 
 section {
