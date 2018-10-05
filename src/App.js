@@ -13,7 +13,7 @@ class App extends Component {
         <section>
           <div className="column">
             <div className="card-content">
-              <h1>Panda Bears</h1>
+              <h1>Gems</h1>
               <p>
                 Pandas are bears native to south-central China, and are
                 objectively the cutest animals on earth."
@@ -23,7 +23,7 @@ class App extends Component {
           </div>
           <div className="column">
             <div className="card-content">
-              <h1>Miniature Painting</h1>
+              <h1>Video Games</h1>
               <p>
                 I enjoy painting miniatures. I've only been painting for about
                 6-months, here's some of my work."
