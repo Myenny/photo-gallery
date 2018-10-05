@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import CategoryList from './CategoryList'
 import PhotoList from './PhotoList'
-// import PhotoDetails from './PhotoDetails'
+import PhotoDetails from './PhotoDetails'
 
 // import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
@@ -22,7 +22,7 @@ class App extends Component {
 
         <CategoryList />
         <PhotoList />
-        {/* <PhotoDetails /> */}
+        <PhotoDetails />
       </main>
     )
   }
