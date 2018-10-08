@@ -4,15 +4,17 @@ import Data from './Data.json'
 class PhotoList extends Component {
   state = {}
   render() {
+    const category = this.props.match.params.category
+    console.log(this.props)
     return (
       <>
-        <h1>{Data['pandas'].title}</h1>
-        <h2>{Data['pandas'].description}</h2>
-        {Data['pandas'].photos.map(photo => {
+        <h1>{Data[category].title}</h1>
+        <h2>{Data[category].description}</h2>
+        {Data[category].photos.map(photo => {
           return (
             <figure>
-              <img src={photo.image} />
-              <a href="">{photo.image}</a>
+              <img src={photo.imageURL} />
+              <a href="">{photo.title}</a>
             </figure>
           )
         })}
