@@ -17,12 +17,14 @@ class App extends Component {
           </header>
           <nav>
             <ul>
-              <li>Home</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
             </ul>
           </nav>
           <Switch>
             <Route exact path="/" component={CategoryList} />
-            <Route path="/:category" component={PhotoList} />
+            <Route exact path="/:category" component={PhotoList} />
             <Route path="/:category/:index" component={PhotoDetails} />
           </Switch>
         </main>

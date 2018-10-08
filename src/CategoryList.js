@@ -10,7 +10,7 @@ class CategoryList extends Component {
     return (
       <>
         <section>
-          {Object.keys(Data).map((category, i) => {
+          {Object.keys(Data).map((category, index) => {
             return (
               <div className="column">
                 <div className="card-content">
@@ -19,7 +19,7 @@ class CategoryList extends Component {
                   </h1>
                   <p>{Data[category].description}</p>
                 </div>
-                <img src={Data[category].photos[i].imageURL} />
+                <img src={Data[category].photos[index].imageURL} />
               </div>
             )
           })}
