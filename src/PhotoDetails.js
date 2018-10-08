@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
+import Data from './Data.json'
+
 class PhotoDetails extends Component {
   state = {}
   render() {
     return (
       <>
-        <h2>I enjoy making jewelry with gems and gold</h2>
-        <img src="https://cdn-images-1.medium.com/max/1600/1*i1vVm3EqqDIkyucD0079wg.jpeg" />
-        <a href="">Jewels</a>
+        <h2>{Data['pandas'].photos[0].title}</h2>
+        <img src={Data['pandas'].photos[0].imageURL} />
+        <a href={Data['pandas'].photos[0].sourceURL}>Jewels</a>
       </>
     )
   }

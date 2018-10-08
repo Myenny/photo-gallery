@@ -4,26 +4,29 @@ import CategoryList from './CategoryList'
 import PhotoList from './PhotoList'
 import PhotoDetails from './PhotoDetails'
 
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <main>
-        <header>
-          <h1>Things I like</h1>
-          <h2>A Photo Gallery By Michael Yenny</h2>
-        </header>
-        <nav>
-          <ul>
-            <li>Home</li>
-          </ul>
-        </nav>
-
-        <CategoryList />
-        <PhotoList />
-        <PhotoDetails />
-      </main>
+      <Router>
+        <main>
+          <header>
+            <h1>Things I like</h1>
+            <h2>A Photo Gallery By Michael Yenny</h2>
+          </header>
+          <nav>
+            <ul>
+              <li>Home</li>
+            </ul>
+          </nav>
+          <Switch>
+            <Route exact path="/" component={CategoryList} />
+            <Route path="/:category" component={PhotoList} />
+            <Route path="/:category/:index" component={PhotoDetails} />
+          </Switch>
+        </main>
+      </Router>
     )
   }
 }
